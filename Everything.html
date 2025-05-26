@@ -1,0 +1,169 @@
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title> DEN.BIL</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      max-width: 600px;
+      margin: 40px auto;
+      padding: 20px;
+      background: linear-gradient(135deg, #e0f7fa, #80deea);
+      color: #333;
+      border-radius: 12px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+      transition: background 0.5s ease;
+    }
+    .profile-pic {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      object-fit: cover;
+      display: block;
+      margin: 0 auto 20px auto;
+      border: 4px solid #00796b;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      transition: transform 0.3s ease;
+    }
+    .profile-pic:hover {
+      transform: scale(1.1) rotate(5deg);
+      border-color: #004d40;
+    }
+    h1 {
+      text-align: center;
+      color: #004d40;
+      margin-bottom: 10px;
+    }
+    .info p {
+      margin: 10px 0;
+      font-size: 1.1em;
+    }
+    .label {
+      font-weight: 600;
+      color: #00796b;
+    }
+    /* Contact info hover effect */
+    .info p span {
+      transition: color 0.3s ease;
+      cursor: default;
+    }
+    .info p:hover span {
+      color: #004d40;
+    }
+    /* Skill bars */
+    .skills {
+      margin-top: 30px;
+    }
+    .skill {
+      margin-bottom: 15px;
+    }
+    .skill-name {
+      font-weight: 600;
+      margin-bottom: 5px;
+      color: #00796b;
+    }
+    .skill-bar {
+      background: #b2dfdb;
+      border-radius: 20px;
+      overflow: hidden;
+      height: 20px;
+    }
+    .skill-level {
+      height: 100%;
+      width: 0;
+      background: #004d40;
+      border-radius: 20px;
+      transition: width 2s ease;
+    }
+    /* Fun fact section */
+    #funFact {
+      margin-top: 25px;
+      background: #004d40;
+      color: #e0f7fa;
+      padding: 15px;
+      border-radius: 10px;
+      display: none;
+      font-style: italic;
+      text-align: center;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    }
+    button {
+      display: block;
+      margin: 25px auto 0 auto;
+      background-color: #00796b;
+      color: white;
+      border: none;
+      padding: 12px 25px;
+      font-size: 1em;
+      border-radius: 25px;
+      cursor: pointer;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      transition: background-color 0.3s ease;
+    }
+    button:hover {
+      background-color: #004d40;
+    }
+  </style>
+</head>
+<body>
+  <h1>Den.bil</h1>
+  <img src="image/IMG-20250521-WA0010.jpg" alt="Profile Picture" class="profile-pic" />
+  
+  <div class="info">
+    <p><span class="label">Date of Birth:</span> November 29, 2007</p>
+    <p><span class="label">Email:</span> radennbl@gmail.com</p>
+    <p><span class="label">Phone:</span> +62 812 8683 8226</p>
+    <p><span class="label">Address:</span> karawang</p>
+    <p><span class="label">About Me:</span> gatau mau ngetik apaan.</p>
+  </div>
+
+  <div class="skills">
+    <div class="skill">
+      <div class="skill-name">Physique</div>
+      <div class="skill-bar"><div class="skill-level" style="width: 0;"></div></div>
+    </div>
+    <div class="skill">
+      <div class="skill-name">Networking</div>
+      <div class="skill-bar"><div class="skill-level" style="width: 0;"></div></div>
+    </div>
+    <div class="skill">
+      <div class="skill-name">Gaming</div>
+      <div class="skill-bar"><div class="skill-level" style="width: 0;"></div></div>
+    </div>
+  </div>
+
+  <button id="toggleFunFactBtn">Show Fun Fact</button>
+  <div id="funFact">i love cooking and research about recipe</div>
+
+  <script>
+    // Animate skill bars on page load
+    window.addEventListener('load', () => {
+      const skillLevels = document.querySelectorAll('.skill-level');
+      const widths = ['85%', '70%', '80%']; // example skill levels for HTML, CSS, JS
+      skillLevels.forEach((bar, index) => {
+        setTimeout(() => {
+          bar.style.width = widths[index];
+        }, index * 300);
+      });
+    });
+
+    // Toggle fun fact visibility
+    const funFactBtn = document.getElementById('toggleFunFactBtn');
+    const funFact = document.getElementById('funFact');
+
+    funFactBtn.addEventListener('click', () => {
+      if (funFact.style.display === 'none' || funFact.style.display === '') {
+        funFact.style.display = 'block';
+        funFactBtn.textContent = 'Hide Fun Fact';
+      } else {
+        funFact.style.display = 'none';
+        funFactBtn.textContent = 'Show Fun Fact';
+      }
+    });
+  </script>
+</body>
+</html>

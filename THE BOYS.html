@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>THE BOYS</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 800px;
+      margin: 2rem auto;
+      padding: 2rem;
+      background: linear-gradient(135deg, #f0f8ff, #d0e6ff);
+      color: #333;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      transition: background 0.5s ease;
+      text-align: center;
+    }
+    h1 {
+      font-weight: 700;
+      color: #1a3c72;
+      animation: fadeInDown 1s ease forwards;
+      margin-bottom: 2rem;
+    }
+    @keyframes fadeInDown {
+      from {
+        opacity: 0;
+        transform: translateY(-20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    /* Logo styling */
+    .logo {
+      max-width: 150px;
+      margin: 0 auto 3rem auto;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+      cursor: default;
+    }
+    /* Container for 4 photos in 2 columns */
+    .projects-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+      margin-bottom: 2rem;
+    }
+    .photo-block {
+      text-align: center;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+      transition: transform 0.3s ease;
+      cursor: pointer;
+    }
+    img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+    }
+    p {
+      margin-top: 1rem;
+      font-size: 1.1rem;
+      color: #444;
+      line-height: 1.5;
+    }
+    .btn-view {
+      display: inline-block;
+      margin-top: 1.5rem;
+      padding: 0.5rem 1.5rem;
+      background-color: #1a3c72;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: 600;
+      transition: background-color 0.3s ease;
+    }
+    .btn-view:hover {
+      background-color: #144a99;
+    }
+    blockquote {
+      font-style: italic;
+      color: #666;
+      border-left: 4px solid #1a3c72;
+      padding-left: 1rem;
+      margin-top: 2rem;
+      text-align: center;
+    }
+    /* Responsive for small screens */
+    @media (max-width: 600px) {
+      .projects-grid {
+        grid-template-columns: 1fr;
+      }
+      .logo {
+        max-width: 120px;
+        margin-bottom: 2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <h1>HANGOUT LET'S GOO!!!!!</h1>
+
+  <!-- Logo photo -->
+  <img src="image/logo1.jpg" alt="Logo" class="logo" />
+
+  <!-- Projects grid with 4 photos -->
+  <div class="projects-grid">
+    <div class="photo-block">
+      <img src="image/theboys3.jpg" alt="Description of photo 1" title="Click to enlarge" />
+      <p>GRADUATE.</p>
+      <a href="image/theboys3.jpg" target="_blank" class="btn-view" rel="noopener noreferrer">View Larger Image</a>
+    </div>
+    <div class="photo-block">
+      <img src="image/theboys5.jpg" alt="Description of photo 2" title="Click to enlarge" />
+      <p>NEW BOYS.</p>
+      <a href="image/theboys5.jpg" target="_blank" class="btn-view" rel="noopener noreferrer">View Larger Image</a>
+    </div>
+
+  <blockquote>"EVERYTHING THAT IS FUN THE BOYS ALWAYS THERE"</blockquote>
+
+</body>
+</html>
